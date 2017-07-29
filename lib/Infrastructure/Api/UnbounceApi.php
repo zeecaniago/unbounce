@@ -53,7 +53,10 @@ class UnbounceApi
 
         curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, true);
         $return = curl_exec($this->handle);
+        $httpCode = curl_getinfo($this->handle, CURLINFO_HTTP_CODE);
         curl_close($this->handle);
+
+        $this->validateResponse($return, $httpCode);
 
         return $return;
     }
@@ -104,5 +107,19 @@ class UnbounceApi
         );
 
         return $this->curl($url, $payload, true);
+    }
+
+    /**
+     * Validate Api Response
+     *
+     * @param string $response
+     * @param integer $httpCode
+     */
+    private function validateResponse($response, $httpCode)
+    {
+        if ($httpCode !== 200) {
+            echo $response;
+            exit;
+        }
     }
 }
