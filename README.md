@@ -7,6 +7,12 @@ The objective of this assignment is to create a dashboard that lists all Unbounc
 In order to see how the dashboard looks, please go to the following url: 
 
 ```
+https://unbounce.frb.io/dashboard/
+```
+
+`dashboard` is where the application starts. The following url will also work if the project is to be copied to other location:
+
+```
 http:://example.com/dashboard/
 ```
 
