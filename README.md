@@ -18,7 +18,7 @@ http:://example.com/dashboard/
 
 ## How to - WordPress Plugin
 
-Please put the whole directory, including the top {unbounce} folder, inside the {plugins} directory in WordPress. 
+Please put the whole directory, including the top `unbounce` folder, inside the `plugins` directory in WordPress. 
 
 Once it's activated from the backend, the tester can use the following shortcode to display the dashboard in the frontend.  
 
