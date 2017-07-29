@@ -28,7 +28,8 @@ class DashboardController
     /**
      * LeadController constructor.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->view = new Browser();
         $this->leadModel = new Lead();
         $this->pageModel = new Page();
