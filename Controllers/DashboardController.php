@@ -57,7 +57,7 @@ class DashboardController
             'dashboard',
             array(
                 'pages' => $pages,
-                'error' => $this->leadValidation->message()
+                'message' => $this->leadValidation->message()
             )
         );
     }

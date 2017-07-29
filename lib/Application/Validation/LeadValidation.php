@@ -6,14 +6,14 @@
 class LeadValidation
 {
     /** @var string $errorMessage */
-    private $errorMessage;
+    private $message;
 
     /**
      * LeadValidation constructor.
      */
     public function __construct()
     {
-        $this->errorMessage = '';
+        $this->message = '';
     }
 
     /**
@@ -26,20 +26,21 @@ class LeadValidation
     public function validateAddLead($request)
     {
         if (!isset($request['first_name']) || $this->validateString($request['first_name'])) {
-            $this->errorMessage = 'Invalid first name';
+            $this->message = 'Invalid first name';
             return false;
         }
 
         if (!isset($request['last_name']) || $this->validateString($request['last_name'])) {
-            $this->errorMessage = 'Invalid last name';
+            $this->message = 'Invalid last name';
             return false;
         }
 
         if (!isset($request['email']) || !filter_var($request['email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errorMessage = 'Invalid email';
+            $this->message = 'Invalid email';
             return false;
         }
 
+        $this->message = 'A new lead is successfully added';
         return true;
     }
 
@@ -62,6 +63,6 @@ class LeadValidation
      */
     public function message()
     {
-        return $this->errorMessage;
+        return $this->message;
     }
 }

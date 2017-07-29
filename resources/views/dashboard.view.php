@@ -1,5 +1,5 @@
-<?php if ($error) { ?>
-    <p style="color:red;"><?php echo $error; ?></p>
+<?php if ($message) { ?>
+    <p style="color:#A52A2A;"><?php echo $message; ?></p>
 <?php } ?>
 <form method="post">
     <select name="page">
@@ -29,7 +29,7 @@
                 <li>
                     <?php
                         echo sprintf(
-                            '<pre>%s</pre>',
+                            '%s',
                             print_r($lead['formData'], true)
                         );
                     ?>
