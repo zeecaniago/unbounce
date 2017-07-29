@@ -38,7 +38,7 @@ class UnbounceApi
      * @param null $payload
      * @param bool $post
      *
-     * @return mixed[]
+     * @return mixed
      */
     private function curl($url, $payload=null, $post=false)
     {
@@ -88,6 +88,7 @@ class UnbounceApi
      * @param integer $pageId
      * @param mixed[] $data
      *
+     * @return mixed
      */
     public function storeLead($pageId, $data)
     {

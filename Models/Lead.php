@@ -34,6 +34,8 @@ class Lead
      *
      * @param integer $pageId
      * @param mixed[] $lead
+     *
+     * @return mixed
      */
     public function storeLead($pageId, $lead)
     {

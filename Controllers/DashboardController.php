@@ -66,6 +66,8 @@ class DashboardController
      * Store the lead
      *
      * @param mixed[] $request
+     *
+     * @return mixed
      */
     public function store($request)
     {
