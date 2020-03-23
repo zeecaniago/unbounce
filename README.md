@@ -1,6 +1,6 @@
-# Unbounce Assignment
+# Plugin for Unbounce 
 
-The objective of this assignment is to create a dashboard that lists all Unbounce pages and the corresponding leads. The dashboard also contains a form that can be used to add a lead.
+The objective of this plugin is to create a dashboard that lists all Unbounce pages and the corresponding leads. The dashboard also contains a form that can be used to add a lead.
 
 ## How to - Browser
 
